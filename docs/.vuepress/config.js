@@ -16,14 +16,19 @@ module.exports = {
             {
                 title: '阅读方式',
                 path: '/',
-                collapsable: false, // 不折叠
-                children: [
-                    { title: "学前必读", path: "/" }
-                ]
+                collapsable: false // 不折叠
             },
             {
               title: "第一章",
               path: '/ch1',
+              collapsable: false, // 不折叠
+              children: [
+                // { title: "条件类型", path: "/handbook/ConditionalTypes" },
+              ],
+            },
+            {
+              title: "第二章",
+              path: '/ch2',
               collapsable: false, // 不折叠
               children: [
                 // { title: "条件类型", path: "/handbook/ConditionalTypes" },
