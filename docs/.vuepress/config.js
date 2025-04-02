@@ -35,6 +35,14 @@ module.exports = {
               ],
             },
             {
+              title: "第三章",
+              path: '/ch3',
+              collapsable: false, // 不折叠
+              children: [
+                // { title: "条件类型", path: "/handbook/ConditionalTypes" },
+              ],
+            },
+            {
               title: "第六章",
               path: '/ch6',
               collapsable: false, // 不折叠
