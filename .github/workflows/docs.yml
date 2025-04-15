@@ -61,10 +61,10 @@ jobs:
           git fetch origin docs:docs
           git checkout docs -- ./README.md
 
-      - name: Move file to target location
-        run: |
-          # 确保目标目录存在，你需要替换 target_folder 为实际目标目录
-          mv ./README.md ./
+    #   - name: Move file to target location
+    #     run: |
+    #       # 确保目标目录存在，你需要替换 target_folder 为实际目标目录
+    #       mv ./README.md ./
 
       - name: Commit and push changes
         run: |
