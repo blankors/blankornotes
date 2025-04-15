@@ -3,8 +3,7 @@ name: 部署文档
 on:
   push:
     branches:
-      # 确保这是你正在使用的分支名称
-      - docs
+      - docs # 确保这是你正在使用的分支名称
 
 permissions:
   contents: write
@@ -44,6 +43,33 @@ jobs:
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # 这是文档部署到的分支名称
-          branch: main
+          branch: main # 这是文档部署到的分支名称
           folder: docs/.vuepress/dist
+
+  move-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Fetch file from docs branch
+        run: |
+          # 假设要移动的文件是 docs/sample.txt，你需要替换成实际文件名
+          git fetch origin docs:docs
+          git checkout docs -- ./README.md
+
+      - name: Move file to target location
+        run: |
+          # 确保目标目录存在，你需要替换 target_folder 为实际目标目录
+          mv ./README.md ./
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ./README.md
+          git commit -m "move README.md"
+          git push
