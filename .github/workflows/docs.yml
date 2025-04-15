@@ -52,7 +52,7 @@ jobs:
       - name: Checkout master branch
         uses: actions/checkout@v3
         with:
-          ref: master
+          ref: main
           fetch-depth: 0
 
       - name: Fetch file from docs branch
