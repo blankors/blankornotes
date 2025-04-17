@@ -5,6 +5,8 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '首页', link: '/' },
+            { text: '数据仓库', link: '/datawarehouse/' },
+            { text: 'Python', link: '/python/' },
             {
                 text: 'blankor的博客',
                 items: [
@@ -13,8 +15,9 @@ module.exports = {
             }
         ],
         sidebar: {
+            '/': '/',
             // 对应 /datawarehouse 路径的侧边栏
-            '/datawarehouse': [
+            '/datawarehouse/': [
                 {
                     title: '阅读方式',
                     path: '/datawarehouse/',
@@ -44,7 +47,7 @@ module.exports = {
                     collapsable: false,
                 }
             ],
-            'python': [
+            '/python/': [
                 {
                     title: 'with语句',
                     path: '/python/with',
