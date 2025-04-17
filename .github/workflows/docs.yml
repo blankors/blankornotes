@@ -47,6 +47,7 @@ jobs:
           folder: docs/.vuepress/dist
 
   move-file:
+    needs: deploy-main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master branch
