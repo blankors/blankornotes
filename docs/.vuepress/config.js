@@ -1,7 +1,7 @@
 module.exports = {
     base: '/blankornotes/',
-    title: '数据仓库工具箱第三版笔记',
-    description: 'The Data Warehouse Toolkit 3rd Edition',
+    title: 'blankor的笔记',
+    description: 'blankor notes',
     themeConfig: {
         nav: [
             { text: '首页', link: '/' },
