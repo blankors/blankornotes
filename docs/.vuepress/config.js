@@ -15,13 +15,6 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/': [
-                {
-                    title: '阅读方式',
-                    path: '/',
-                    collapsable: false // 不折叠
-                },
-            ],
             // 对应 /datawarehouse 路径的侧边栏
             '/datawarehouse/': [
                 {
