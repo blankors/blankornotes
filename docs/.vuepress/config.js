@@ -19,7 +19,7 @@ module.exports = {
             '/datawarehouse/': [
                 {
                     title: "第一章",
-                    path: '/datawarehouse/ch1/',
+                    path: '/datawarehouse/ch1',
                     collapsable: false, // 不折叠
                     children: [
                         // { title: "条件类型", path: "/handbook/ConditionalTypes" },
@@ -27,24 +27,24 @@ module.exports = {
                 },
                 {
                     title: "第二章",
-                    path: '/datawarehouse/ch2/',
+                    path: '/datawarehouse/ch2',
                     collapsable: false,
                 },
                 {
                     title: "第三章",
-                    path: '/datawarehouse/ch3/',
+                    path: '/datawarehouse/ch3',
                     collapsable: false,
                 },
                 {
                     title: "第六章",
-                    path: '/datawarehouse/ch6/',
+                    path: '/datawarehouse/ch6',
                     collapsable: false,
                 }
             ],
             '/python/': [
                 {
                     title: 'with语句',
-                    path: '/python/with/',
+                    path: '/python/with',
                     collapsable: false // 不折叠
                 },
             ]
