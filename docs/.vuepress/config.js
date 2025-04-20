@@ -16,6 +16,13 @@ module.exports = {
         ],
         sidebar: {
             // 对应 /datawarehouse 路径的侧边栏
+            // '/': [
+            //     {
+            //         title: '阅读方式',
+            //         path: '/',
+            //         collapsable: false // 不折叠
+            //     },
+            // ],
             '/datawarehouse/': [
                 {
                     title: "第一章",
@@ -45,6 +52,11 @@ module.exports = {
                 {
                     title: 'with语句',
                     path: '/python/with',
+                    collapsable: false // 不折叠
+                },
+                {
+                    title: '临时',
+                    path: '/python/factorypattern',
                     collapsable: false // 不折叠
                 },
             ]
