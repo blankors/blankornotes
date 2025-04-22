@@ -1,3 +1,56 @@
+设计模式是由那些有丰富工程经验的人来写的，在学习设计模式时一定要有‘错误的例子’，这些错误的例子可以被当作‘经验’，而不能只看‘正确的例子’，正确的例子更像是一个‘模板’，是看不出来经验的。
+- 一种是从错误的（有缺陷）实现逐渐演变为正确的（完善）实现，学习方法是从错误例子逐步看如何完善为正确例子即可
+- 一种是经典到有标准答案的实现，这类的学习方法是，先看标准答案，观察尝试修改标准答案后会出现哪些问题
+
+# 单例模式
+
+
+
+
+
+```java
+public class TaskManager {
+    private static TaskManager instance = null;
+                            // private + static
+                            // 为了让外界可以访问这个唯一实例，需要在TaskManager中定义一个静态的TaskManager类型的私有成员变量
+    private TaskManager(){
+                            // private + 构造器
+                            // 禁止直接使用new来创建对象
+                            // 更准确的说，禁止类的外部直接使用new来创建对象
+    }
+
+    /*
+    public static TaskManager getInstance() {
+        return instance;
+    }
+    */
+    public static TaskManager getInstance() {
+        if (instance == null){
+            instance = new TaskManager();
+        }
+        return instance;
+    }
+}
+```
+
+
+
+为什么要将成员变量tm定义为静态变量？
+
+如果不声明为静态变量，获取实例的方法getInstance就必须为非静态方法（静态方法尝试访问非静态变量，‘编译器’就会报错），要调用非静态方法，必须通过实例化对象调用。这就导致‘要获取唯一对象，需要先创建一个对象’，这完全违背了单例模式。
+
+
+
+```java
+public class EagerSingleton {
+    private static final EagerSingleton instance = new EagerSingleton();
+    private EagerSingleton(){}
+    public EagerSingleton getInstance(){
+        return instance;
+    }
+
+}
+```
 
 
 # 简单工厂模式
