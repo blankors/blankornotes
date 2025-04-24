@@ -55,8 +55,13 @@ module.exports = {
                     collapsable: false // 不折叠
                 },
                 {
-                    title: '临时',
+                    title: '工厂模式',
                     path: '/python/factorypattern',
+                    collapsable: false // 不折叠
+                },
+                {
+                    title: '异步并发并行',
+                    path: '/python/Asynchronous-Concurrent-Parallelism',
                     collapsable: false // 不折叠
                 },
             ]
